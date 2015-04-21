@@ -14,8 +14,8 @@ DEPENDENCIES
     revision: 1c6dcc235957caca7e74841b4465bc1ab18bbdc6
     branch: stable/icehouse
   openstack-common
-    git: git://github.com/stackforge/cookbook-openstack-common.git
-    revision: ad0f56149d8805537446e68275e27a11094e280f
+    git: git://github.com/mbednarz/cookbook-openstack-common.git
+    revision: e03eee3307b415ebd0f4bf06d20a44c7f4aa2e36
     branch: stable/icehouse
   openstack-compute
     git: git://github.com/stackforge/cookbook-openstack-compute.git
@@ -34,8 +34,8 @@ DEPENDENCIES
     revision: 8a93e80f7c90f3ee3c47079d504cd1b27ba4b2f7
     branch: stable/icehouse
   openstack-network
-    git: git://github.com/stackforge/cookbook-openstack-network.git
-    revision: 58f12c50605db94bc7763c445655cbc0a57986f8
+    git: git://github.com/mbednarz/cookbook-openstack-network.git
+    revision: 5271871d18b6ccbc411d6001b916aa3cbb512665
     branch: stable/icehouse
   openstack-object-storage
     git: git://github.com/stackforge/cookbook-openstack-object-storage.git
@@ -90,12 +90,10 @@ GRAPH
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
     yum-erlang_solutions (>= 0.0.0)
-  git (4.1.0)
+  git (4.2.1)
     build-essential (>= 0.0.0)
     dmg (>= 0.0.0)
-    runit (>= 1.0)
     windows (>= 0.0.0)
-    yum (~> 3.0)
     yum-epel (>= 0.0.0)
   iptables (1.0.0)
   logrotate (1.9.1)
@@ -160,6 +158,7 @@ GRAPH
     openstack-common (~> 9.5)
     openstack-compute (~> 9.0)
     openstack-identity (~> 9.0)
+  packagecloud (0.0.17)
   pacman (1.1.1)
   postgresql (3.3.4)
     apt (>= 0.0.0)
@@ -170,10 +169,8 @@ GRAPH
     yum-epel (>= 0.0.0)
   rabbitmq (3.0.4)
     erlang (>= 0.9.0)
-  runit (1.5.18)
-    build-essential (>= 0.0.0)
-    yum (~> 3.0)
-    yum-epel (>= 0.0.0)
+  runit (1.6.0)
+    packagecloud (>= 0.0.0)
   selinux (0.7.2)
   statsd (0.1.6)
     build-essential (>= 0.0.0)
