@@ -1,0 +1,129 @@
+{
+  "name": "multihost",
+  "description": "test ",
+  "cookbook_versions": {
+
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+    "apt": {
+      "cacher_ipaddress": "192.168.3.52",
+      "cacher_port": "3142"
+    },
+    "mysql": {
+      "allow_remote_root": true,
+      "root_network_acl": [
+        "%"
+      ]
+    },
+    "openstack": {
+      "developer_mode": true,
+      "identity": {
+        "bind_interface": "eth1"
+      },
+      "network": {
+        "openvswitch": {
+          "local_ip_interface": "eth2",
+          "tunnel_id_ranges": "1:3200",
+          "enable_tunneling": "True",
+          "tenant_network_type": "gre"
+        },
+        "core_plugin": "neutron.plugins.ml2.plugin.Ml2Plugin",
+        "service_plugins": [
+          "neutron.services.l3_router.l3_router_plugin.L3RouterPlugin"
+        ],
+        "debug": "True",
+        "verbose": "True"
+      },
+      "compute": {
+        "network": {
+          "service_type": "neutron"
+        }
+      },
+      "endpoints": {
+        "image-registry-bind": {
+          "bind_interface": "eth1"
+        },
+        "image-api-bind": {
+          "bind_interface": "eth1"
+        },
+        "compute-api-bind": {
+          "bind_interface": "eth1"
+        },
+        "network-api-bind": {
+          "bind_interface": "eth1"
+        },
+        "block-storage-api-bind": {
+          "bind_interface": "eth1"
+        },
+        "identity-bind": {
+          "bind_interface": "eth1"
+        },
+        "host": "192.168.3.50",
+        "mq": {
+          "host": "192.168.3.50",
+          "bind_interface": "eth1"
+        },
+        "db": {
+          "host": "192.168.3.50",
+          "bind_interface": "eth1"
+        },
+        "network": {
+          "debug": "True",
+          "service_type": "network",
+          "dhcp": {
+            "enable_isolated_metadata": "True"
+          },
+          "metadata": {
+            "nova_metadata_ip": "192.168.3.50"
+          },
+          "openvswitch": {
+            "tunnel_id_ranges": "1:1000",
+            "enable_tunneling": "True",
+            "tenant_network_type": "gre",
+            "local_ip_interface": "eth2"
+          },
+          "api": {
+            "bind_interface": "eth1"
+          }
+        },
+        "image": {
+          "api": {
+            "bind_interface": "eth1"
+          },
+          "registry": {
+            "bind_interface": "eth1"
+          },
+          "image_upload": true,
+          "upload_images": [
+            "cirros",
+            "ubuntu"
+          ],
+          "upload_image": {
+            "ubuntu": "http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64-disk1.img",
+            "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
+          }
+        },
+        "compute": {
+          "xvpvnc_proxy": {
+            "bind_interface": "eth1"
+          },
+          "novnc_proxy": {
+            "bind_interface": "eth1"
+          },
+          "network": {
+            "public_interface": "eth2",
+            "service_type": "neutron"
+          },
+          "config": {
+            "ram_allocation_ratio": 5
+          }
+        }
+      }
+    }
+  }
+}

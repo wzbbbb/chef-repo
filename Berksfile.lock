@@ -1,150 +1,190 @@
-{
-  "sources": {
-    "apache2": {
-      "locked_version": "1.9.6"
-    },
-    "apt": {
-      "locked_version": "2.3.8"
-    },
-    "aws": {
-      "locked_version": "2.1.1"
-    },
-    "build-essential": {
-      "locked_version": "1.4.2"
-    },
-    "database": {
-      "locked_version": "2.2.0"
-    },
-    "erlang": {
-      "locked_version": "1.4.2"
-    },
-    "memcached": {
-      "locked_version": "1.7.2"
-    },
-    "mysql": {
-      "locked_version": "5.3.6"
-    },
-    "mysql-chef_gem": {
-      "locked_version": "0.0.2"
-    },
-    "openssl": {
-      "locked_version": "1.1.0"
-    },
-    "postgresql": {
-      "locked_version": "3.3.4"
-    },
-    "python": {
-      "locked_version": "1.4.6"
-    },
-    "rabbitmq": {
-      "locked_version": "3.0.4"
-    },
-    "xfs": {
-      "locked_version": "1.1.0"
-    },
-    "yum": {
-      "locked_version": "3.1.4"
-    },
-    "selinux": {
-      "locked_version": "0.7.2"
-    },
-    "yum-epel": {
-      "locked_version": "0.3.4"
-    },
-    "statsd": {
-      "locked_version": "0.1.6",
-      "git": "git://github.com/att-cloud/cookbook-statsd.git",
-      "ref": "d3298ae4ec4a6d8cc2ca166f0688a92753ced338"
-    },
-    "openstack-block-storage": {
-      "locked_version": "9.4.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-block-storage.git",
-      "ref": "52f0066fe9f3683c93ed5771037693ef654b00ab"
-    },
-    "openstack-common": {
-      "locked_version": "9.7.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-common.git",
-      "ref": "b8633843349809e2675744f211c89bf06d249b7e"
-    },
-    "openstack-compute": {
-      "locked_version": "9.3.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-compute.git",
-      "ref": "d296361f19906f384c73c7f051e5036e23145082"
-    },
-    "openstack-dashboard": {
-      "locked_version": "9.1.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-dashboard.git",
-      "ref": "40de484ce72f1fa8ee37abb4392ef95bd11e337f"
-    },
-    "openstack-identity": {
-      "locked_version": "9.3.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-identity.git",
-      "ref": "3a99613b89fb28d21def8cbeaa63e40da32768f5"
-    },
-    "openstack-image": {
-      "locked_version": "9.2.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-image.git",
-      "ref": "3145080d30db12c36526cd09a72047287ba641cd"
-    },
-    "openstack-network": {
-      "locked_version": "9.1.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-network.git",
-      "ref": "ce731dd2b74950dce53a91deb6629c7fdc968af9"
-    },
-    "openstack-object-storage": {
-      "locked_version": "9.0.3",
-      "git": "git://github.com/stackforge/cookbook-openstack-object-storage.git",
-      "ref": "ab2ed2ab51e36d230a62436b8281c00ef43efa47"
-    },
-    "openstack-ops-database": {
-      "locked_version": "9.2.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-ops-database.git",
-      "ref": "87887e92d3ba1e9a7e8ad0cedfc0041dffcb4fcb"
-    },
-    "openstack-ops-messaging": {
-      "locked_version": "9.0.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-ops-messaging.git",
-      "ref": "db772edbf3baf402db09bb49ea3d3323aba7c1bc"
-    },
-    "openstack-orchestration": {
-      "locked_version": "9.2.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-orchestration.git",
-      "ref": "7e0cb8b2fb84de9485d687ff643c084d31e8d1d7"
-    },
-    "openstack-telemetry": {
-      "locked_version": "9.3.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-telemetry.git",
-      "ref": "e20473259995037be353fcbd4c5ecf1bf6e45556"
-    },
-    "iptables": {
-      "locked_version": "0.13.2"
-    },
-    "logrotate": {
-      "locked_version": "1.5.0"
-    },
-    "pacman": {
-      "locked_version": "1.1.1"
-    },
-    "yum-erlang_solutions": {
-      "locked_version": "0.2.0"
-    },
-    "runit": {
-      "locked_version": "1.5.10"
-    },
-    "yum-mysql-community": {
-      "locked_version": "0.1.10"
-    },
-    "git": {
-      "locked_version": "4.0.2"
-    },
-    "dmg": {
-      "locked_version": "2.2.0"
-    },
-    "windows": {
-      "locked_version": "1.30.2"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.6"
-    }
-  }
-}
+DEPENDENCIES
+  apache2 (= 1.9.6)
+  apt (= 2.3.8)
+  aws (= 2.1.1)
+  build-essential (= 1.4.2)
+  database (= 2.2.0)
+  erlang (= 1.4.2)
+  memcached (= 1.7.2)
+  mysql (= 5.3.6)
+  mysql-chef_gem (= 0.0.2)
+  openssl (= 1.1.0)
+  openstack-block-storage
+    git: git://github.com/stackforge/cookbook-openstack-block-storage.git
+    revision: 1c6dcc235957caca7e74841b4465bc1ab18bbdc6
+    branch: stable/icehouse
+  openstack-common
+    git: git://github.com/stackforge/cookbook-openstack-common.git
+    revision: ad0f56149d8805537446e68275e27a11094e280f
+    branch: stable/icehouse
+  openstack-compute
+    git: git://github.com/stackforge/cookbook-openstack-compute.git
+    revision: 858277dad528342681f48a589bfd6b060ca1953f
+    branch: stable/icehouse
+  openstack-dashboard
+    git: git://github.com/stackforge/cookbook-openstack-dashboard.git
+    revision: 1c13d6fa1a77923dbc748dd24f4d25a849b97def
+    branch: stable/icehouse
+  openstack-identity
+    git: git://github.com/stackforge/cookbook-openstack-identity.git
+    revision: 1ce974dc2542369cae72cf605dc0b12f52a714ca
+    branch: stable/icehouse
+  openstack-image
+    git: git://github.com/stackforge/cookbook-openstack-image.git
+    revision: 8a93e80f7c90f3ee3c47079d504cd1b27ba4b2f7
+    branch: stable/icehouse
+  openstack-network
+    git: git://github.com/stackforge/cookbook-openstack-network.git
+    revision: 58f12c50605db94bc7763c445655cbc0a57986f8
+    branch: stable/icehouse
+  openstack-object-storage
+    git: git://github.com/stackforge/cookbook-openstack-object-storage.git
+    revision: bb9c607292a80dbd18364be838c2f293302c2abd
+    branch: stable/icehouse
+  openstack-ops-database
+    git: git://github.com/stackforge/cookbook-openstack-ops-database.git
+    revision: 29735ce8a5029b66516b91f515764826b7125507
+    branch: stable/icehouse
+  openstack-ops-messaging
+    git: git://github.com/stackforge/cookbook-openstack-ops-messaging.git
+    revision: db772edbf3baf402db09bb49ea3d3323aba7c1bc
+    branch: stable/icehouse
+  openstack-orchestration
+    git: git://github.com/stackforge/cookbook-openstack-orchestration.git
+    revision: 7f683b9f566939bcc23c64311652055a9594307b
+    branch: stable/icehouse
+  openstack-telemetry
+    git: git://github.com/stackforge/cookbook-openstack-telemetry.git
+    revision: 6c2ad6b00fda0abd3b1a1889ff49313d93f9dd8e
+    branch: stable/icehouse
+  postgresql (= 3.3.4)
+  python (= 1.4.6)
+  rabbitmq (= 3.0.4)
+  selinux (= 0.7.2)
+  statsd
+    git: git://github.com/att-cloud/cookbook-statsd.git
+    revision: d3298ae4ec4a6d8cc2ca166f0688a92753ced338
+  xfs (= 1.1.0)
+  yum (= 3.1.4)
+  yum-epel (= 0.3.4)
+
+GRAPH
+  apache2 (1.9.6)
+    iptables (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    pacman (>= 0.0.0)
+  apt (2.3.8)
+  aws (2.1.1)
+  build-essential (1.4.2)
+  chef_handler (1.1.6)
+  database (2.2.0)
+    aws (>= 0.0.0)
+    mysql (>= 5.0.0)
+    mysql-chef_gem (>= 0.0.0)
+    postgresql (>= 1.0.0)
+    xfs (>= 0.0.0)
+  dmg (2.2.2)
+  erlang (1.4.2)
+    apt (>= 1.7.0)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
+  git (4.1.0)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  iptables (1.0.0)
+  logrotate (1.9.1)
+  memcached (1.7.2)
+    runit (~> 1.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  mysql (5.3.6)
+    yum-mysql-community (>= 0.0.0)
+  mysql-chef_gem (0.0.2)
+    build-essential (>= 0.0.0)
+    mysql (>= 0.0.0)
+  openssl (1.1.0)
+  openstack-block-storage (9.4.2)
+    apt (>= 2.3.8)
+    openstack-common (~> 9.5)
+    openstack-identity (~> 9.0)
+    openstack-image (~> 9.0)
+    python (>= 1.4.6)
+    selinux (>= 0.7.2)
+  openstack-common (9.7.1)
+    apt (>= 2.3.8)
+    database (>= 2.0.0)
+    yum (>= 3.1.4)
+    yum-epel (>= 0.3.4)
+  openstack-compute (9.3.3)
+    openstack-common (~> 9.5)
+    openstack-identity (~> 9.0)
+    openstack-image (~> 9.0)
+    openstack-network (~> 9.0)
+    python (~> 1.4.6)
+    selinux (~> 0.7)
+  openstack-dashboard (9.1.2)
+    apache2 (< 2.0.0)
+    openstack-common (~> 9.5)
+  openstack-identity (9.3.2)
+    openstack-common (~> 9.0)
+  openstack-image (9.2.1)
+    openstack-common (~> 9.5)
+    openstack-identity (~> 9.0)
+  openstack-network (9.1.2)
+    openstack-common (~> 9.5)
+    openstack-identity (~> 9.0)
+  openstack-object-storage (9.0.4)
+    apt (>= 2.3.8)
+    memcached (>= 1.7.2)
+    openstack-common (~> 9.0)
+    statsd (>= 0.1.5)
+  openstack-ops-database (9.2.2)
+    database (~> 2.2)
+    mysql (~> 5.3.0)
+    mysql-chef_gem (~> 0.0.2)
+    openstack-common (~> 9.5)
+    postgresql (~> 3.3)
+  openstack-ops-messaging (9.0.1)
+    openstack-common (~> 9.0)
+    rabbitmq (>= 3.0.4)
+  openstack-orchestration (9.2.1)
+    openstack-common (~> 9.5)
+    openstack-identity (~> 9.0)
+  openstack-telemetry (9.3.2)
+    openstack-common (~> 9.5)
+    openstack-compute (~> 9.0)
+    openstack-identity (~> 9.0)
+  pacman (1.1.1)
+  postgresql (3.3.4)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    openssl (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  rabbitmq (3.0.4)
+    erlang (>= 0.9.0)
+  runit (1.5.18)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  selinux (0.7.2)
+  statsd (0.1.6)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+  windows (1.36.6)
+    chef_handler (>= 0.0.0)
+  xfs (1.1.0)
+  yum (3.1.4)
+  yum-epel (0.3.4)
+    yum (~> 3.0)
+  yum-erlang_solutions (0.2.0)
+    yum (~> 3.0)
+  yum-mysql-community (0.1.17)
+    yum (>= 3.0)
