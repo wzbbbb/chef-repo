@@ -23,7 +23,7 @@ cookbook 'openstack-block-storage',
   github: 'stackforge/cookbook-openstack-block-storage',
   branch: 'stable/icehouse'
 cookbook 'openstack-common',
-  github: 'mbednarz/cookbook-openstack-common',
+  github: 'wzbbbb/cookbook-openstack-common',
   branch: 'stable/icehouse'
 cookbook 'openstack-compute',
   github: 'stackforge/cookbook-openstack-compute',
@@ -38,7 +38,7 @@ cookbook 'openstack-image',
   github: 'stackforge/cookbook-openstack-image',
   branch: 'stable/icehouse'
 cookbook 'openstack-network',
-  github: 'mbednarz/cookbook-openstack-network',
+  github: 'wzbbbb/cookbook-openstack-network',
   branch: 'stable/icehouse'
 cookbook 'openstack-object-storage',
   github: 'stackforge/cookbook-openstack-object-storage',
