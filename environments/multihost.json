@@ -11,7 +11,7 @@
   },
   "override_attributes": {
     "apt": {
-      "cacher_ipaddress": "192.168.3.52",
+      "cacher_ipaddress": "192.168.112.209",
       "cacher_port": "3142"
     },
     "mysql": {
@@ -23,11 +23,11 @@
     "openstack": {
       "developer_mode": true,
       "identity": {
-        "bind_interface": "eth1"
+        "bind_interface": "bond0"
       },
       "network": {
         "openvswitch": {
-          "local_ip_interface": "eth2",
+          "local_ip_interface": "bond0",
           "tunnel_id_ranges": "1:3200",
           "enable_tunneling": "True",
           "tenant_network_type": "gre"
@@ -46,31 +46,31 @@
       },
       "endpoints": {
         "image-registry-bind": {
-          "bind_interface": "eth1"
+          "bind_interface": "bond0"
         },
         "image-api-bind": {
-          "bind_interface": "eth1"
+          "bind_interface": "bond0"
         },
         "compute-api-bind": {
-          "bind_interface": "eth1"
+          "bind_interface": "bond0"
         },
         "network-api-bind": {
-          "bind_interface": "eth1"
+          "bind_interface": "bond0"
         },
         "block-storage-api-bind": {
-          "bind_interface": "eth1"
+          "bind_interface": "bond0"
         },
         "identity-bind": {
-          "bind_interface": "eth1"
+          "bind_interface": "bond0"
         },
-        "host": "192.168.3.50",
+        "host": "c1r11",
         "mq": {
-          "host": "192.168.3.50",
-          "bind_interface": "eth1"
+          "host": "c1r11",
+          "bind_interface": "bond0"
         },
         "db": {
-          "host": "192.168.3.50",
-          "bind_interface": "eth1"
+          "host": "c1r11",
+          "bind_interface": "bond0"
         },
         "network": {
           "debug": "True",
@@ -79,24 +79,24 @@
             "enable_isolated_metadata": "True"
           },
           "metadata": {
-            "nova_metadata_ip": "192.168.3.50"
+            "nova_metadata_ip": "c1r11"
           },
           "openvswitch": {
             "tunnel_id_ranges": "1:1000",
             "enable_tunneling": "True",
             "tenant_network_type": "gre",
-            "local_ip_interface": "eth2"
+            "local_ip_interface": "bond0"
           },
           "api": {
-            "bind_interface": "eth1"
+            "bind_interface": "bond0"
           }
         },
         "image": {
           "api": {
-            "bind_interface": "eth1"
+            "bind_interface": "bond0"
           },
           "registry": {
-            "bind_interface": "eth1"
+            "bind_interface": "bond0"
           },
           "image_upload": true,
           "upload_images": [
@@ -110,13 +110,13 @@
         },
         "compute": {
           "xvpvnc_proxy": {
-            "bind_interface": "eth1"
+            "bind_interface": "bond0"
           },
           "novnc_proxy": {
-            "bind_interface": "eth1"
+            "bind_interface": "bond0"
           },
           "network": {
-            "public_interface": "eth2",
+            "public_interface": "bond0",
             "service_type": "neutron"
           },
           "config": {
@@ -127,3 +127,4 @@
     }
   }
 }
+
