@@ -17,7 +17,7 @@
     "mysql": {
       "allow_remote_root": true,
       "root_network_acl": [
-        "%"
+        "192.168.114.0/24"
       ]
     },
     "openstack": {
@@ -27,7 +27,7 @@
       },
       "network": {
         "openvswitch": {
-          "local_ip_interface": "bond0",
+          "local_ip_interface": "bond1.2004",
           "tunnel_id_ranges": "1:3200",
           "enable_tunneling": "True",
           "tenant_network_type": "gre"
@@ -36,8 +36,54 @@
         "service_plugins": [
           "neutron.services.l3_router.l3_router_plugin.L3RouterPlugin"
         ],
-        "debug": "True",
-        "verbose": "True"
+        "debug": "False",
+        "verbose": "True",
+        "service_type": "network",
+        "metadata": {
+          "nova_metadata_ip": "192.168.114.139"
+        },
+        "openvswitch": {
+          "tunnel_id_ranges": "1:1000",
+          "enable_tunneling": "True",
+          "tenant_network_type": "gre",
+          "local_ip_interface": "bond1.2004"
+        },
+        "api": {
+          "bind_interface": "bond0"
+        }
+      },
+      "image": {
+        "api": {
+          "bind_interface": "bond0",
+          "default_store": "file"
+        },
+        "registry": {
+          "bind_interface": "bond0"
+        },
+        "image_upload": true,
+        "upload_images": [
+          "cirros",
+          "ubuntu"
+        ],
+        "upload_image": {
+          "ubuntu": "http://c2r11/precise-server-cloudimg-amd64-disk1.img",
+          "cirros": "http://c2r11/cirros-0.3.0-x86_64-disk.img"
+        }
+      },
+      "compute": {
+        "xvpvnc_proxy": {
+          "bind_interface": "bond0"
+        },
+        "novnc_proxy": {
+          "bind_interface": "bond0"
+        },
+        "network": {
+          "public_interface": "bond1.2004",
+          "service_type": "neutron"
+        },
+        "config": {
+          "ram_allocation_ratio": 5
+        }
       },
       "compute": {
         "network": {
@@ -63,65 +109,14 @@
         "identity-bind": {
           "bind_interface": "bond0"
         },
-        "host": "c1r11",
+        "host": "192.168.114.139",
         "mq": {
-          "host": "c1r11",
+          "host": "192.168.114.139",
           "bind_interface": "bond0"
         },
         "db": {
-          "host": "c1r11",
+          "host": "192.168.114.139",
           "bind_interface": "bond0"
-        },
-        "network": {
-          "debug": "True",
-          "service_type": "network",
-          "dhcp": {
-            "enable_isolated_metadata": "True"
-          },
-          "metadata": {
-            "nova_metadata_ip": "c1r11"
-          },
-          "openvswitch": {
-            "tunnel_id_ranges": "1:1000",
-            "enable_tunneling": "True",
-            "tenant_network_type": "gre",
-            "local_ip_interface": "bond0"
-          },
-          "api": {
-            "bind_interface": "bond0"
-          }
-        },
-        "image": {
-          "api": {
-            "bind_interface": "bond0"
-          },
-          "registry": {
-            "bind_interface": "bond0"
-          },
-          "image_upload": true,
-          "upload_images": [
-            "cirros",
-            "ubuntu"
-          ],
-          "upload_image": {
-            "ubuntu": "http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64-disk1.img",
-            "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
-          }
-        },
-        "compute": {
-          "xvpvnc_proxy": {
-            "bind_interface": "bond0"
-          },
-          "novnc_proxy": {
-            "bind_interface": "bond0"
-          },
-          "network": {
-            "public_interface": "bond0",
-            "service_type": "neutron"
-          },
-          "config": {
-            "ram_allocation_ratio": 5
-          }
         }
       }
     }
